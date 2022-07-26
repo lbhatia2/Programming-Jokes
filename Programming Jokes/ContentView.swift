@@ -43,12 +43,14 @@ struct ContentView: View {
                         let joke = Joke(setup: setup, punchline: punchline)
                         jokes.append(joke)
                     }
+                    return
                     
                 }
                 
             }
             
         }
+        showingAlert = true
         
     }
 }
