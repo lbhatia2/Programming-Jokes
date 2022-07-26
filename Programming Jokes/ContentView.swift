@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var jokes = [Joke]()
+    @State private var showingAlert = false
     var body: some View {
         NavigationView{
             List(jokes){joke in
@@ -22,6 +23,11 @@ struct ContentView: View {
         .onAppear(perform: {
             getJokes()
         })
+        .alert(isPresented: $showingAlert){
+            Alert(title: Text("Loading erorr"),
+            message: Text("There was a problem loading the data"),
+                  dismissButton: .default(Text("OK")))
+        }
     }
     func getJokes() {
         let apiKey = "?rapidapi-key = d3536bf3fbmsh8949c2bb1c6d036p1a2ca1jsnad0c31252dbe"
@@ -47,6 +53,8 @@ struct ContentView: View {
     }
 }
 
+
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
@@ -58,3 +66,5 @@ struct Joke: Identifiable {
     var setup = ""
     var punchline = ""
 }
+
+
