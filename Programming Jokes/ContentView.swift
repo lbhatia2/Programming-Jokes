@@ -19,6 +19,9 @@ struct ContentView: View {
             }
             .navigationTitle("Programming Jokes ")
         }
+        .onAppear(perform: {
+            getJokes()
+        })
     }
     func getJokes() {
         
