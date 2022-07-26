@@ -25,12 +25,12 @@ struct ContentView: View {
         })
         .alert(isPresented: $showingAlert){
             Alert(title: Text("Loading erorr"),
-            message: Text("There was a problem loading the data"),
+                  message: Text("There was a problem loading the data"),
                   dismissButton: .default(Text("OK")))
         }
     }
     func getJokes() {
-        let apiKey = "?rapidapi-key = d3536bf3fbmsh8949c2bb1c6d036p1a2ca1jsnad0c31252dbe"
+        let apiKey = "?rapidapi-key=63284d5ce8mshe1ade5b1942d9b3p1472a5jsnf44aab4102fc"
         let query = "https://dad-jokes.p.rapidapi.com/joke/type/programming\(apiKey)"
         if let url = URL(string: query) {
             if let data = try? Data(contentsOf: url) {
