@@ -24,13 +24,7 @@ struct ContentView: View {
         })
     }
     func getJokes() {
-        
-        jokes.append(Joke(setup: "Why do programmers always get Christmas and Halloween mixed up?",
-                          punchline: "Because DEC 25 = OCT 31"))
-        jokes.append(Joke(setup: "How did the programmer die in the shower?",
-                          punchline: "She followed the shampoo bottle instructions: Lather. Rinse. Repeat."))
-        jokes.append(Joke(setup: "There are 10 types of people in the world",
-                          punchline: "Those who understand binary and those who don’t."))
+        let apiKey = "?rapidapi-key = (d3536bf3fbmsh8949c2bb1c6d036p1a2ca1jsnad0c31252dbe)"
         
     }
 }
